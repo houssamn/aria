@@ -66,48 +66,43 @@ class ViewController: UIViewController, ARSCNViewDelegate, ARSessionDelegate {
         guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
         
         // Create a custom object to visualize the plane geometry and extent.
-        //let plane = Plane(anchor: planeAnchor, in: sceneView)
+        let plane = Plane(anchor: planeAnchor, in: sceneView)
         
         // Add the visualization to the ARKit-managed node so that it tracks
         // changes in the plane anchor as plane estimation continues.
-        // node.addChildNode(plane)
+        node.addChildNode(plane)
         
-        print("Added a Plane ")
     }
     
     /// - Tag: UpdateARContent
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         // Update only anchors and nodes set up by `renderer(_:didAdd:for:)`.
-//        guard let planeAnchor = anchor as? ARPlaneAnchor,
-//            let plane = node.childNodes.first as? Plane
-//            else { return }
-//
-        
-        guard let planeAnchor = anchor as? ARPlaneAnchor else { return }
-        
-        print("Updating a plane anchor ")
-        // Update ARSCNPlaneGeometry to the anchor's new estimated shape.
-//        if let planeGeometry = plane.meshNode.geometry as? ARSCNPlaneGeometry {
-//            planeGeometry.update(from: planeAnchor.geometry)
-//        }
+        guard let planeAnchor = anchor as? ARPlaneAnchor,
+            let plane = node.childNodes.first as? Plane
+            else { return }
 
-//        // Update extent visualization to the anchor's new bounding rectangle.
-//        if let extentGeometry = plane.extentNode.geometry as? SCNPlane {
-//            extentGeometry.width = CGFloat(planeAnchor.extent.x)
-//            extentGeometry.height = CGFloat(planeAnchor.extent.z)
-//            plane.extentNode.simdPosition = planeAnchor.center
-//        }
-//
-//        // Update the plane's classification and the text position
-//        if #available(iOS 12.0, *),
-//            let classificationNode = plane.classificationNode,
-//            let classificationGeometry = classificationNode.geometry as? SCNText {
-//            let currentClassification = planeAnchor.classification.description
-//            if let oldClassification = classificationGeometry.string as? String, oldClassification != currentClassification {
-//                classificationGeometry.string = currentClassification
-//                classificationNode.centerAlign()
-//            }
-//        }
+        // Update ARSCNPlaneGeometry to the anchor's new estimated shape.
+        if let planeGeometry = plane.meshNode.geometry as? ARSCNPlaneGeometry {
+            planeGeometry.update(from: planeAnchor.geometry)
+        }
+
+        // Update extent visualization to the anchor's new bounding rectangle.
+        if let extentGeometry = plane.extentNode.geometry as? SCNPlane {
+            extentGeometry.width = CGFloat(planeAnchor.extent.x)
+            extentGeometry.height = CGFloat(planeAnchor.extent.z)
+            plane.extentNode.simdPosition = planeAnchor.center
+        }
+
+        // Update the plane's classification and the text position
+        if #available(iOS 12.0, *),
+            let classificationNode = plane.classificationNode,
+            let classificationGeometry = classificationNode.geometry as? SCNText {
+            let currentClassification = planeAnchor.classification.description
+            if let oldClassification = classificationGeometry.string as? String, oldClassification != currentClassification {
+                classificationGeometry.string = currentClassification
+                classificationNode.centerAlign()
+            }
+        }
         
     }
     

@@ -7,23 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD163C632607918A00A0C287 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD163C622607918A00A0C287 /* Utilities.swift */; };
+		BD163C67260792E800A0C287 /* Assets.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BD163C66260792E800A0C287 /* Assets.scnassets */; };
 		BD67D1972607521D00D5D685 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67D1962607521D00D5D685 /* AppDelegate.swift */; };
-		BD67D1992607521D00D5D685 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BD67D1982607521D00D5D685 /* art.scnassets */; };
 		BD67D19B2607521D00D5D685 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67D19A2607521D00D5D685 /* ViewController.swift */; };
 		BD67D19E2607521D00D5D685 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD67D19C2607521D00D5D685 /* Main.storyboard */; };
 		BD67D1A02607521E00D5D685 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD67D19F2607521E00D5D685 /* Assets.xcassets */; };
 		BD67D1A32607521E00D5D685 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD67D1A12607521E00D5D685 /* LaunchScreen.storyboard */; };
+		BD6E8DC326077E68003B21AA /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6E8DC226077E68003B21AA /* Plane.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD163C622607918A00A0C287 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		BD163C66260792E800A0C287 /* Assets.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Assets.scnassets; sourceTree = "<group>"; };
 		BD67D1932607521D00D5D685 /* aria.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = aria.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD67D1962607521D00D5D685 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BD67D1982607521D00D5D685 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		BD67D19A2607521D00D5D685 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD67D19D2607521D00D5D685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BD67D19F2607521E00D5D685 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD67D1A22607521E00D5D685 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD67D1A42607521E00D5D685 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD6E8DC226077E68003B21AA /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Plane.swift; path = /Users/houssam/Desktop/aria/aria/Plane.swift; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +60,15 @@
 		BD67D1952607521D00D5D685 /* aria */ = {
 			isa = PBXGroup;
 			children = (
+				BD6E8DC226077E68003B21AA /* Plane.swift */,
+				BD163C622607918A00A0C287 /* Utilities.swift */,
 				BD67D1962607521D00D5D685 /* AppDelegate.swift */,
-				BD67D1982607521D00D5D685 /* art.scnassets */,
 				BD67D19A2607521D00D5D685 /* ViewController.swift */,
 				BD67D19C2607521D00D5D685 /* Main.storyboard */,
 				BD67D19F2607521E00D5D685 /* Assets.xcassets */,
 				BD67D1A12607521E00D5D685 /* LaunchScreen.storyboard */,
 				BD67D1A42607521E00D5D685 /* Info.plist */,
+				BD163C66260792E800A0C287 /* Assets.scnassets */,
 			);
 			path = aria;
 			sourceTree = "<group>";
@@ -124,7 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD67D1992607521D00D5D685 /* art.scnassets in Resources */,
+				BD163C67260792E800A0C287 /* Assets.scnassets in Resources */,
 				BD67D1A32607521E00D5D685 /* LaunchScreen.storyboard in Resources */,
 				BD67D1A02607521E00D5D685 /* Assets.xcassets in Resources */,
 				BD67D19E2607521D00D5D685 /* Main.storyboard in Resources */,
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD67D19B2607521D00D5D685 /* ViewController.swift in Sources */,
+				BD6E8DC326077E68003B21AA /* Plane.swift in Sources */,
+				BD163C632607918A00A0C287 /* Utilities.swift in Sources */,
 				BD67D1972607521D00D5D685 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
